@@ -248,19 +248,6 @@ def send_initial_messages(state, assistant_id):
     second_prompt = f"""
     Based on Utkarsh’s profile and the provided job description, create a cover letter for Utkarsh in less than 100 words. The cover letter must sound human, highlight relevant experience, and should be in a paragraph format. Don't address anyone from the team including recruiter/hiring manager. Highlight relevant experiences, and overall work experience.
     """
-    
-    '''
-    second_prompt = f"""
-    Based on Utkarsh’s profile and the provided job description, create seven distinct LinkedIn connection request messages for different target audiences in the job funnel- Hiring Manager, Recruiter, Alumnus, and Cold Network. Each message should be under 350 characters, convey enthusiasm for the opportunity, highlight Utkarsh's relevant experiences and projects that align with the job description. If possible, include metrics and use abbreviations. Use the following templates for reference:
-    HM Message 1: ‘Hi [HM Name],\n I'd love to discuss a [Role-short form] within your team at [Company Name]. My [relevant experience] aligns well with [specific skills needed by team].’
-    Recruiter Message 1: ‘Hi [Recruiter],(/n)I’m interested in the [Role-short form] position at [Company name]. My [relevant background] and [x]+ yrs of [relevant experience] align well with the team's needs. I'd appreciate a chance to chat!’
-    Alumnus Message: ‘Hi Alumnus,/n I’m a fellow [School Short form] alum (20XX). I’m interested in a [Role- short form] role at [Company], and my [relevant experience] aligns closely with the [skills team is seeking]. I’d appreciate any insights or a referral if possible!’
-    Cold Message 1: ‘I admire your team at [Company] for [relevant work team is doing]. My [relevant experience] aligns with a [opportunity in your team], and I'd appreciate a chance to chat!’
-    Cold Message 2: 'I've always admired [Company] for its [relevant work]. I’m interested in a [Role- Short form] role in [Specific Team/Product]. My 4+ yrs of PM experience [relevant experience] align well with the team's needs. I'd appreciate a chance to chat!'
-    Cold Message 3: 'Hi (Their Name),I know you’re busy. I just wanted to say, for X role you have open: \n You’re looking for (X years of experience) in PM: I have (Y years of experience) \n You’re looking for (Z functional experience): I did that at (A company) \n Your company is going after (B mission): I dig that \n (Insert proof of work). Let’s chat?',
-    Cold Message 4: 'Hey (HM Name), I believe my (X experience) qualifies me for your (Y role), and I love what (Z company is doing). Let’s connect?'
-    """
-    '''
 
     create_message(state.thread_id, "user", second_prompt)
 
