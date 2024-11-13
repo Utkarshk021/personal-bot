@@ -240,13 +240,13 @@ def start_chat(state, assistant_id):
 
 def send_initial_messages(state, assistant_id):
     initial_prompt = f"""
-    Utkarsh is applying for a {state.job_type} role. Please review and analyze the provided job description, highlighting the following points in bullets: Company Name, Role, Desired Years of Experience, Expectations from the company (desired skill set for the role in 2-3 short points), and Alignment (how Utkarsh's skills, projects, and experiences align with the job requirements in 2-3 short bullet points). If the job description is irrelevant or incomplete, kindly request a resubmission. Keep your response within 125 words. Job Info: {state.job_description_text}, and Here are Utkarsh optional notes: {state.resume_text}
+    Utkarsh is applying for a {state.job_type} role. Please review and analyze the provided job description, highlighting the following points in bullets: Company Name, Role, Desired Years of Experience, Expectations from the company (desired skill set for the role in 2-3 short points), . If the job description is irrelevant or incomplete, kindly request a resubmission. Keep your response within 125 words. Job Info: {state.job_description_text}, and Here are Utkarsh optional notes: {state.resume_text}
     """
     create_message(state.thread_id, "user", initial_prompt)
     run_assistant(state, assistant_id)
 
     second_prompt = f"""
-    Based on Utkarsh’s profile and the provided job description, create a cover letter for Utkarsh in less than 100 words. The cover letter must sound human, highlight relevant experience, and should be in a paragraph format. Don't address anyone from the team including recruiter/hiring manager. Highlight relevant experiences, and overall work experience.
+    Based on Utkarsh’s profile and the provided job description, create a cover letter for Utkarsh in less than 100 words. The cover letter must sound human, highlight relevant experience, and should be in a paragraph format. Don't address anyone from the team including recruiter/hiring manager. Highlight relevant experiences, and overall work experience. Start the cover letter with relating how your experience matches with the role at the company
     """
 
     create_message(state.thread_id, "user", second_prompt)
